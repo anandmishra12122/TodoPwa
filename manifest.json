@@ -1,13 +1,14 @@
 {
   "name": "My Simple PWA",
   "short_name": "PWA App",
-  "start_url": "./index.html",
+  "start_url": "/TodoPwa/index.html",
+  "scope": "/TodoPwa/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0000ff",
   "icons": [
     {
-      "src": "./icon.png",
+      "src": "/TodoPwa/icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
