@@ -1,4 +1,4 @@
-Notification.requestPermission();
+
 let task = document.querySelector("#taskName")
 let type = document.querySelector("#type")
 let priority = document.querySelector("#priority")
@@ -211,13 +211,16 @@ function checkTaskReminder(){
 checkTaskReminder()
 setInterval(checkTaskReminder,5000)
 
-document.querySelector(".notify-btn").addEventListener("click",async()=>{
-    let p = await Notification.requestPermission();
+document.querySelector(".notify-btn").addEventListener("click", async () => {
+    const permission = await Notification.requestPermission();
 
-    alert(p);
+    console.log("Permission:", permission);
 
-    if( p === "granted")
-    {
-        new Notification("Test Notification",{body:"Mobile Working"})
+    if (permission === "granted") {
+        new Notification("TaskFlow", {
+            body: "Notifications Enabled 🚀"
+        });
+    } else {
+        alert("Permission denied");
     }
-})
+});
