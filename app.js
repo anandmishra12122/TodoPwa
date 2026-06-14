@@ -211,16 +211,14 @@ function checkTaskReminder(){
 checkTaskReminder()
 setInterval(checkTaskReminder,10000)
 
-document.querySelector(".notify-btn").addEventListener("click", async () => {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".notify-btn").addEventListener("click", async () => {
     const permission = await Notification.requestPermission();
 
-    console.log("Permission:", permission);
-
     if (permission === "granted") {
-        new Notification("TaskFlow", {
-            body: "Notifications Enabled 🚀"
-        });
-    } else {
-        alert("Permission denied");
+      new Notification("TaskFlow", {
+        body: "Notifications Enabled 🚀"
+      });
     }
+  });
 });
