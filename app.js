@@ -214,7 +214,7 @@ setInterval(checkTaskReminder,10000)
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".notify-btn").addEventListener("click", async () => {
     const permission = await Notification.requestPermission();
-
+    alert("Button clicked 🚀");
     if (permission === "granted") {
       new Notification("TaskFlow", {
         body: "Notifications Enabled 🚀"
