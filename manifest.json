@@ -1,6 +1,6 @@
 {
-  "name": "My Simple PWA",
-  "short_name": "PWA App",
+  "name": "Todo PWA",
+  "short_name": "Todo App",
   "start_url": "/TodoPwa/index.html",
   "scope": "/TodoPwa/",
   "display": "standalone",
