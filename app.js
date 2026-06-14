@@ -211,14 +211,14 @@ function checkTaskReminder(){
 checkTaskReminder()
 setInterval(checkTaskReminder,10000)
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".notify-btn").addEventListener("click", async () => {
-    const permission = await Notification.requestPermission();
+window.addEventListener("load", () => {
+  const btn = document.querySelector(".notify-btn");
+
+  console.log("BTN FOUND:", btn);
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
     alert("Button clicked 🚀");
-    if (permission === "granted") {
-      new Notification("TaskFlow", {
-        body: "Notifications Enabled 🚀"
-      });
-    }
   });
 });
