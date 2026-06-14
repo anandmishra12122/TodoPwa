@@ -209,7 +209,7 @@ function checkTaskReminder(){
 }
 
 checkTaskReminder()
-setInterval(checkTaskReminder,5000)
+setInterval(checkTaskReminder,10000)
 
 document.querySelector(".notify-btn").addEventListener("click", async () => {
     const permission = await Notification.requestPermission();
