@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My PWA App</title>
-
-  <link rel="manifest" href="/TodoPwa/manifest.json">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <h1>🚀 My Simple PWA</h1>
+    
+    <h3 id="text">TaskFlow</h3>
+    <input type="text" placeholder="Search Tasks.." id="Searchbox">
+    <button class="notify-btn">
+    🔔 Allow Notifications
+    </button>
 
-  <button onclick="showMessage()">Click Me</button>
+    <div class="container">
+    <div class="box">
+        <h3 id="totaltask">0</h3>
+        <p>Total Tasks</p>
+    </div>
 
-  <p id="msg"></p>
+    <div class="box">
+        <h3 id="completetask">0</h3>
+        <p>Completed</p>
+    </div>
+
+    <div class="box">
+        <h3 id="pendingtask">0</h3>
+        <p>Pending</p>
+    </div>
+
+    <div class="box">
+        <h3 id="importanttask">0</h3>
+        <p>Important</p>
+    </div>
+    </div>
+
+    <div id="add">
+    <p>Add New Task</p>
+
+    
+    <input type="text" placeholder="Enter Task" id="taskName">
+
+    
+    <select id="type">
+        <option value="">Task Type</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="study">Study</option>
+        <option value="other">Other</option>
+    </select>
+
+    
+    <select id="priority">
+        <option value="">Priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+
+    <input type="date" id="date">
+
+    
+    <input type="time" id="time">
+
+    <button id="addbtn">➕Add Task</button>
+</div>
+    <div id="btn-group">
+    <button class="all" value="All">All</button>
+    <button class="all" value="Work">Work</button>
+    <button class="all" value="Personal">Personal</button>
+    <button class="all" value="Study">Study</button>
+</div>
+</div>
+
+<div id="scrollBox">
+    
+</div>
 
   <script src="app.js"></script>
 
