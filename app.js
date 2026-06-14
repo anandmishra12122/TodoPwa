@@ -1,4 +1,19 @@
+window.addEventListener("load", async () => {
+  if (Notification.permission === "granted") {
+    new Notification("👋 Welcome!", {
+      body: "App successfully opened 🚀"
+    });
+  } 
+  else if (Notification.permission !== "denied") {
+    const permission = await Notification.requestPermission();
 
+    if (permission === "granted") {
+      new Notification("👋 Welcome!", {
+        body: "Thanks for enabling notifications 🚀"
+      });
+    }
+  }
+});
 let task = document.querySelector("#taskName")
 let type = document.querySelector("#type")
 let priority = document.querySelector("#priority")
